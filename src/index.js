@@ -11,19 +11,19 @@ import "@/assets/css/index.less"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Suspense fallback="loading">
-      {/* 使用 styled-components 提供的provider */}
-      <ThemeProvider theme={theme}>
-        {/* 使用 redux 的Provider */}
-        <Provider store={store}>
-          {/* 使用hash路由 */}
-          <HashRouter>
-            <App />
-          </HashRouter>
-        </Provider>
-      </ThemeProvider>
-    </Suspense>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <Suspense fallback="loading">
+    {/* 使用 styled-components 提供的provider */}
+    <ThemeProvider theme={theme}>
+      {/* 使用 redux 的Provider */}
+      <Provider store={store}>
+        {/* 使用hash路由 */}
+        <HashRouter>
+          <App />
+        </HashRouter>
+      </Provider>
+    </ThemeProvider>
+  </Suspense>
+  // </React.StrictMode>
 );
 

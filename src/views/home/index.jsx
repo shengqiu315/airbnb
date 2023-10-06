@@ -1,14 +1,15 @@
 import React, { memo, useEffect } from 'react'
 import { request } from 'utils'
+import { HomeWarpper } from './style'
+import { BannerWarpper } from './c-cpns/home-banner/style'
+
 const Home = memo(() => {
 
-    useEffect(() => {
-        request.get({ url: '/home/highscore' }).then(res => {
-            console.log(res);
-        })
-    }, [])
+
     return (
-        <div>Home</div>
+        <HomeWarpper>
+            <BannerWarpper></BannerWarpper>
+        </HomeWarpper>
     )
 })
 

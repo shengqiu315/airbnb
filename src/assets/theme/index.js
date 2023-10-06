@@ -1,11 +1,15 @@
 const theme = {
-  color: {
+  background: {
     primaryColor: "#ff385c",
     secondaryColor: "#00848A"
   },
   text: {
     primaryColor: "#484848",
-    secondaryColor: "#222"
+    secondaryColor: "#222",
+    threeColor: '#fff'
+  },
+  border: {
+    primaryColor: "#ddd"
   },
   mixin: {
     boxShadow: `
@@ -14,7 +18,8 @@ const theme = {
         box-shadow: 0 2px 4px rgba(0,0,0,.18);
       }
     `
-  }
+  },
+
 }
 
 export default theme
