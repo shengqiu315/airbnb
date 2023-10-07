@@ -23,7 +23,6 @@ color: ${props => props.theme.text.primaryColor};
     border-radius: 22px;
     width: 77px;
     height: 42px;
-    cursor: pointer;
     ${props => props.theme.mixin.boxShadow}
     .menu{
       position: absolute;
@@ -53,13 +52,13 @@ color: ${props => props.theme.text.primaryColor};
         }
         .q-enter-active{
             opacity: 1;
-            height: 240px;
+            height: 230px;
             transition: all 350ms ease;
         }
 
         .q-exit{
             opacity: 1;
-            height:240px;
+            height:230px;
         }
         .q-exit-active{
             opacity: 0;

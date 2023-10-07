@@ -11,3 +11,6 @@ const store = configureStore({
 
 
 export default store
+
+export * from './module/home/index'
+export * from './module/more/index'

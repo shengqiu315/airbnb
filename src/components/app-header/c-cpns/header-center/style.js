@@ -9,7 +9,6 @@ export const CenterWarpper = styled.div`
     border-radius: 22px;
     padding: 5px 10px;
     border: 1px solid #eee;
-    cursor: pointer;
     font-weight: 600;
     /* 使用通用主题文字颜色 */
     color: ${(props) => props.theme.text.primaryColor};

@@ -19,8 +19,13 @@ const HeaderRight = memo(() => {
 
     function clickProfileHandle(e) {
         e.stopPropagation();
-        setShowMenuState(true)
+        setShowMenuState(!showMenuState)
 
+    }
+
+    function clickMenuItemHandle(e) {
+        e.stopPropagation();
+        console.log(e)
     }
     return (
         <RightWarpper>
@@ -37,11 +42,11 @@ const HeaderRight = memo(() => {
                 {
                     (<CSSTransition in={showMenuState} unmountOnExit={true} classNames="q" timeout={350} >
                         <div className='menu'>
-                            <div className="item">个人中心</div>
-                            <div className="item">购物车</div>
-                            <div className="item">客服</div>
-                            <div className="item">操作手册</div>
-                            <div className="item">帮助</div>
+                            <div className="item" onClick={clickMenuItemHandle}>个人中心</div>
+                            <div className="item" onClick={clickMenuItemHandle}>购物车</div>
+                            <div className="item" onClick={clickMenuItemHandle}>客服</div>
+                            <div className="item" onClick={clickMenuItemHandle}>操作手册</div>
+                            <div className="item" onClick={clickMenuItemHandle}>帮助</div>
                         </div>
                     </CSSTransition>)
                 }
