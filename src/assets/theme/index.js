@@ -6,7 +6,7 @@ const theme = {
   text: {
     primaryColor: "#484848",
     secondaryColor: "#222",
-    threeColor: '#fff'
+    threeColor: '#00848A',
   },
   border: {
     primaryColor: "#ddd",

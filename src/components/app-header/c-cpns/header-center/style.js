@@ -24,6 +24,6 @@ export const CenterWarpper = styled.div`
         height: 28px;
         border-radius: 50%;
         background-color: ${(props) => props.theme.background.primaryColor};
-        color:${props => props.theme.text.threeColor}
+        color:#fff;
     }
 `
