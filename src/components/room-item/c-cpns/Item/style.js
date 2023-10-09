@@ -3,7 +3,8 @@ export const ItemWarpper = styled.div`
     width: ${props => props.width};
     padding: 8px;
     border-radius: 5px;
-    ${props => props.theme.mixin.boxShadow}
+    flex-shrink: 0;
+    /* ${props => props.theme.mixin.boxShadow} */
     
     .photo{
         width: 100%;

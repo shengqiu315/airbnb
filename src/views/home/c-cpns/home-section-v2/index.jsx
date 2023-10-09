@@ -6,6 +6,7 @@ import RoomItem from '@/components/room-item/index'
 import SectionHeader from '@/components/section-header'
 import SectionFooter from '@/components/section-footer/index'
 
+
 const HomeSectionV2 = memo((props) => {
     const { roomInfo } = props
 
@@ -19,7 +20,7 @@ const HomeSectionV2 = memo((props) => {
     return (
         <div>
             <SectionHeader title={roomInfo?.title} subTitle={roomInfo?.subtitle} />
-            <SectionTabs tabNames={nameArray} activeNameFn={(_name) => setActiveNameFn(_name)} />
+            <SectionTabs tabNames={nameArray} activeNameFn={setActiveNameFn} />
             <RoomItem roomList={roomInfo?.dest_list?.[name]} roomItemWidth='33.3333%' />
             <SectionFooter text={name + '房源'} path={'/detail'} />
         </div>

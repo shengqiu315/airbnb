@@ -14,3 +14,19 @@ export const getHomeHighScore = () => {
 export const getHomeDiscount = () => {
     return request.get({ url: '/home/discount' })
 }
+
+
+/**向往城市 */
+export const getHomeLongFor = () => {
+    return request.get({ url: '/home/longfor' })
+}
+
+/**热门推荐 */
+export const getHomeHotrecommenddest = () => {
+    return request.get({ url: '/home/hotrecommenddest' })
+}
+
+/**plus房源 */
+export const getHomePlus = () => {
+    return request.get({ url: '/home/plus' })
+}

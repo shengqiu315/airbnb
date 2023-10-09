@@ -7,6 +7,12 @@ export const SectionFooterWarpper = styled.div`
         font-weight: 600;
         cursor: pointer;
         user-select: none;
-        color:${props => props.theme.text.threeColor};
+        .baseColor{
+            color:#000;
+        }
+        .textColor{
+            color:${props => props.theme.text.threeColor};
+        }
+       
     }
 `

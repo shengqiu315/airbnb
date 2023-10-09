@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types'
 import React, { memo, useState } from 'react'
-import { SectionTabsWarpper } from './style'
 import classNames from 'classnames'
+
+import { SectionTabsWarpper } from './style'
+import ScrollView from '@/components/scroll-view'
+
 const index = memo((props) => {
     const { tabNames, activeNameFn } = props
 
@@ -14,10 +17,11 @@ const index = memo((props) => {
 
     return (
         <SectionTabsWarpper>
-            {tabNames?.map((item, index) => {
-                return <div key={index} className={classNames('item', { active: currentName === item })} onClick={e => clickTabsItemHandle(item, index)}>{item}</div>
-            })}
-
+            <ScrollView>
+                {tabNames?.map((item, index) => {
+                    return <div key={index} className={classNames('item', { active: currentName === item })} onClick={e => clickTabsItemHandle(item, index)}>{item}</div>
+                })}
+            </ScrollView>
         </SectionTabsWarpper>
     )
 })

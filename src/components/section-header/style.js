@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 export const SectionHeaderWarpper = styled.div`
   color: #222;
+  width: 100%;
   .title {
     font-size: 22px;
     font-weight: 700;
