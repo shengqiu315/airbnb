@@ -30,3 +30,12 @@ export const getHomeHotrecommenddest = () => {
 export const getHomePlus = () => {
     return request.get({ url: '/home/plus' })
 }
+
+// 全部数据
+export const getEntireListApi = (offset, size = 20) => {
+    return request.get({
+        url: '/entire/list', params: {
+            offset, size
+        }
+    })
+}

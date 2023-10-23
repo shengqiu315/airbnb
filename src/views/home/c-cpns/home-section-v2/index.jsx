@@ -22,7 +22,7 @@ const HomeSectionV2 = memo((props) => {
             <SectionHeader title={roomInfo?.title} subTitle={roomInfo?.subtitle} />
             <SectionTabs tabNames={nameArray} activeNameFn={setActiveNameFn} />
             <RoomItem roomList={roomInfo?.dest_list?.[name]} roomItemWidth='33.3333%' />
-            <SectionFooter text={name + '房源'} path={'/detail'} />
+            <SectionFooter text={name + '房源'} path={'/more'} />
         </div>
     )
 })

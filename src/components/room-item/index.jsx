@@ -9,7 +9,7 @@ const index = memo((props) => {
     return (
         <RoomItemWarpper>
             {roomList?.map(item => {
-                return <ItemContainer roomInfo={item} key={item?.id} roomItemWidth={roomItemWidth} />
+                return <ItemContainer roomInfo={item} key={item?._id} roomItemWidth={roomItemWidth} />
             })}
         </RoomItemWarpper>
     )

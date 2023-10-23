@@ -22,9 +22,11 @@ const Home = memo(() => {
     }), shallowEqual)
 
     const dispath = useDispatch()
+
     useEffect(() => {
         dispath(fetchHomeGoodPrice())
     }, [dispath])
+
     return (
         <HomeWarpper>
             <BannerWarpper></BannerWarpper>
