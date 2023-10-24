@@ -46,13 +46,15 @@ const index = memo((props) => {
 
     return (
         <PaginationWarpper>
-            <div className="box left" onClick={e => handleClick('left')} ><IconArrowLeft ></IconArrowLeft></div>
+
+
+            {getPageNum().length > 0 && <div className="box left" onClick={e => handleClick('left')} ><IconArrowLeft ></IconArrowLeft></div>}
             {
                 getPageNum()?.map((item, index) => {
                     return <span key={item} className={classNames('box item-container', { active: activeIndex === index })} onClick={e => clickItemHandle(index)}>{item}</span>
                 })
             }
-            <div className="box right" onClick={e => handleClick('right')}><IconArrowRight></IconArrowRight></div>
+            {getPageNum().length > 0 && <div className="box right" onClick={e => handleClick('right')}><IconArrowRight></IconArrowRight></div>}
         </PaginationWarpper>
     )
 })

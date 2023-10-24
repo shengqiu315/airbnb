@@ -1,12 +1,23 @@
 import { styled } from "styled-components";
 
 export const TestWarpper = styled.div`
-width: 350px;
-height: 200px;
+width: 100%;
+height: 160px;
 position: relative;
-.swiper{
-    width: 100%;
-    height: 100%;
+overflow: hidden;
+&:hover{
+    .left{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+
+    .right{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+}
+
 }
 .left,.right{
     position: absolute;
@@ -14,31 +25,33 @@ position: relative;
     transform:translateY(-50%) ;
     width: 32px;
     height: 32px;
-    background-color: #ccc;
     border-radius: 50%;
     display: flex;
-    justify-content: center;align-items:center;
+    justify-content: center;
+    align-items:center;
     color: red;
     cursor: pointer;
+    z-index: 9;
 }
 .left{
     left: 0;
+    display: none;
 }
 
 .right{
+    display: none;
     right: 0;
 }
 .item{
-    background-color: #f0f0f0;
     width: 100%;
-    height: 100%;
+    height: 160px !important;
+    object-fit: cover;
 }
 .dot{
     position: absolute;
     left: 50%;
     overflow: hidden;
     width: 30%;
-    background-color: #fff;
     bottom: 12px;
     transform: translateX(-50%);
 }
@@ -55,10 +68,10 @@ position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 12px;
-        height: 12px;
-        transition: all 150ms ease;
-        border: 1px solid #ccc;
+        width: 10px;
+        height: 10px;
+        transition: all 250ms ease;
+        border: 1px solid ${props => props.theme.background.secondaryColor};
         border-radius: 50%;
         cursor: pointer;
     }

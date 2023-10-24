@@ -3,13 +3,21 @@ import PropTypes from 'prop-types'
 
 import { ItemWarpper } from './style'
 import Rating from '@mui/material/Rating';
-
+import Swiper from '@/components/swiper/index'
 const ItemContainer = memo((props) => {
     const { roomInfo, roomItemWidth = '25%' } = props
+
+    function getImageContent() {
+        if (roomInfo?.picture_urls && Array.isArray(roomInfo?.picture_urls) && roomInfo?.picture_urls.length) {
+            return <Swiper data={roomInfo?.picture_urls}></Swiper>
+        } else {
+            <img src={roomInfo?.picture_url} alt="" />
+        }
+    }
     return (
         <ItemWarpper width={roomItemWidth}>
             <div className="photo">
-                <img src={roomInfo?.picture_url} alt="" />
+                {getImageContent()}
             </div>
             <p className='room-intro'>{roomInfo?.verify_info?.messages?.join('·')}</p>
             <h3 className='title'>{roomInfo?.name}</h3>

@@ -10,15 +10,18 @@ const Test = memo((props) => {
     const { data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] } = props
     const carouselRef = useRef()
     const dotRef = useRef()
-    const onChange = (index) => {
-        setActiveIndex(index)
-    };
     function clickIconHandle(val) {
         if (val === 'left') {
             carouselRef.current.prev()
+            let index = activeIndex - 1
+            if (index < 0) index = data.length - 1
+            setActiveIndex(index)
         }
         else {
             carouselRef.current.next()
+            let index = activeIndex + 1
+            if (index > data.length - 1) index = 0
+            setActiveIndex(index)
         }
     }
 
@@ -35,10 +38,10 @@ const Test = memo((props) => {
             <div className="left" onClick={e => clickIconHandle('left')}>
                 <IconArrowLeft></IconArrowLeft>
             </div>
-            <Carousel className='swiper' dots={false} ref={carouselRef} afterChange={onChange}>
+            <Carousel className='swiper' dots={false} ref={carouselRef} >
                 {
                     data.map(item => {
-                        return <div className='item'>{item}</div>
+                        return <img key={item} className='item' src={item} alt=''></img>
                     })
                 }
             </Carousel>
@@ -46,7 +49,7 @@ const Test = memo((props) => {
                 <div className='dot-container' ref={dotRef}>
                     {
                         data.map((item, index) => {
-                            return <div className={classNames('dot-item', { active: activeIndex === index })} ></div>
+                            return <div key={index} className={classNames('dot-item', { active: activeIndex === index })} ></div>
                         })
                     }
                 </div>

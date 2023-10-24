@@ -4,7 +4,9 @@ const DEFAULT_MORE_STORE = {
     info: {},
     offset: 0,
     total: 0,
-    moreList: [], size: 20
+    moreList: [],
+    size: 20,
+    isLoading: false
 }
 
 
@@ -18,6 +20,8 @@ const MoreStoreReducer = (state = DEFAULT_MORE_STORE, action) => {
             return { ...state, offset: action.offset }
         case actionTypes.CHANGE_TOTAL:
             return { ...state, total: action.total }
+        case actionTypes.CHANGE_LOADING:
+            return { ...state, isLoading: action.isLoading }
         default:
             return { ...state }
     }

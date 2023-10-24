@@ -17,6 +17,7 @@ color: ${props => props.theme.text.primaryColor};
 .profile{
     position: relative;
     display: flex;
+    z-index: 99;
     align-items: center;
     justify-content: space-around;
     border: 1px solid ${props => props.theme.border.primaryColor};
