@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React, { memo, useState } from 'react'
 import FilterData from '@/assets/data/filter_data.json'
 import { FilterWarpper } from './style'

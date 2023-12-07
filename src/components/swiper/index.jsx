@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React, { memo, useRef, useState, useEffect } from 'react'
 import { Carousel } from 'antd';
 import { TestWarpper } from './style'
